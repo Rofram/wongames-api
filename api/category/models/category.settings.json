@@ -16,11 +16,6 @@
       "type": "uid",
       "targetField": "name"
     },
-    "products": {
-      "via": "categories",
-      "collection": "product",
-      "dominant": true
-    },
     "games": {
       "via": "categories",
       "collection": "game"

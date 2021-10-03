@@ -3,21 +3,21 @@
   "version": "0.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "repositories",
-    "icon": "plug",
-    "description": "Description of repositories plugin."
+    "name": "Repositories",
+    "icon": "code",
+    "description": "A list of our repositories in Github"
   },
   "dependencies": {},
   "author": {
-    "name": "A Strapi developer",
-    "email": "",
-    "url": ""
+    "name": "Rodrigo de França",
+    "email": "howdrigo.fr@gmail.com",
+    "url": "https://github.com/Rofram"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer",
-      "email": "",
-      "url": ""
+      "name": "Rodrigo de França",
+      "email": "howdrigo.fr@gmail.com",
+      "url": "https://github.com/Rofram"
     }
   ],
   "engines": {

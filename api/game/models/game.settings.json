@@ -44,11 +44,12 @@
       "type": "enumeration",
       "enum": [
         "FREE",
-        "PEGI_3",
-        "PEGI_7",
-        "PEGI_12",
-        "PEGI_16",
-        "PEGI_18"
+        "BR0",
+        "BR10",
+        "BR12",
+        "BR14",
+        "BR16",
+        "BR18"
       ]
     },
     "cover": {
@@ -61,7 +62,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "galery": {
+    "gallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -81,14 +82,14 @@
       "via": "games",
       "dominant": true
     },
-    "plataforms": {
-      "collection": "plataform",
-      "via": "games",
-      "dominant": true
-    },
     "publisher": {
       "model": "publisher",
       "via": "games"
+    },
+    "platforms": {
+      "collection": "platform",
+      "via": "games",
+      "dominant": true
     }
   }
 }

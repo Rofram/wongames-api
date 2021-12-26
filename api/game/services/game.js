@@ -154,7 +154,7 @@ async function createGames(products) {
           const game = await strapi.services.game.create({
             name: product.title,
             slug: product.slug.replace(/_/g, "-"),
-            price: product.price.amount,
+            price: product.price.amount || product.price.finalMoney.amount,
             release_date: new Date(
               Number(product.globalReleaseDate) * 1000
               ).toISOString(),

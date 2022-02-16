@@ -74,7 +74,7 @@ async function create(name, entityName) {
   }
 }
 
-async function cerateManyToMany(products) {
+async function createManyToMany(products) {
   try {
     const developers = {};
     const publishers = {};
@@ -154,7 +154,7 @@ async function createGames(products) {
           const game = await strapi.services.game.create({
             name: product.title,
             slug: product.slug.replace(/_/g, "-"),
-            price: product.price.amount || product.price.finalMoney.amount,
+            price: (product.price.amount || product.price.finalMoney.amount) ?? 0,
             release_date: new Date(
               Number(product.globalReleaseDate) * 1000
               ).toISOString(),
@@ -196,7 +196,7 @@ module.exports = {
       const { data: { products } } = await axios.get(gogApiUrl);
       console.info(`Found ${products.length} games`);
 
-      await cerateManyToMany(products);
+      await createManyToMany(products);
       await createGames(products);
     } catch (e) {
       console.error("populate", Exception(e));

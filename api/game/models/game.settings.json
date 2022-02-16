@@ -33,7 +33,7 @@
     },
     "price": {
       "type": "decimal",
-      "required": true,
+      "required": false,
       "default": 0
     },
     "release_date": {
